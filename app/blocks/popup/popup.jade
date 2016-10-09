@@ -1,0 +1,59 @@
+mixin popup()
+	+b.popup&attributes(attributes)
+		+e('h2').title Заказать продукцию
+
+		+e('form').form#popup-form(method='post' action='/some')
+			+e.row
+				+e.input
+					+b.input
+						+e('input').field(type='text' value='' id='input-1' name='name')
+						+e.valid
+						+e.error
+						+e.label(for='input-1') Ваше имя<span>*</span>
+				+e.input
+					+b.input
+						+e('input').field(type='text' value='' id='input-2' name='')
+						+e.label(for='input-2') Телефон
+			+e.row
+				+e.input
+					+b.input
+						+e('input').field(type='text' value='' id='input-3' name='email')
+						+e.valid
+						+e.error
+						+e.label(for='input-3') E-mail<span>*</span>
+				+e.input
+					+b.input
+						+e('input').field(type='text' value='' id='input-4' name='city')
+						+e.valid
+						+e.error
+						+e.label(for='input-4') Город назначения<span>*</span>
+			+e.row
+				+e.input
+					+b.input._select
+						+e('select').field._select(id='input-5' name='product')
+							+e('option')(value='some') Title
+							+e('option')(value='some1') Title 2
+							+e('option')(value='some2') Title 3
+						+e.valid
+						+e.error
+
+						+e.label._prod(for='input-5') Продукция<span>*</span>
+				+e.input
+					+e.spinner-label(for='input-6') Масса <span>(тонн)</span>
+					+b.spinner
+						+e('input').field(type='text' value='30' id='input-6' name='')
+						//- +e.buttons
+						+e('a').button._up +
+						+e('a').button._down –
+			+e.row
+				+e.textarea
+					+b.input._note
+						+e('textarea').field._text(value='' id='input-7' name='note')
+						+e.valid
+						+e.error
+						+e.label._text(for='input-7') Примечания<span>*</span>
+			+e.button
+				+b('input').button._style-third(type='submit' value='отправить')
+
+
+

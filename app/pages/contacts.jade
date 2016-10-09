@@ -1,0 +1,24 @@
+include /blocks/icon/icon
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/sidebar/sidebar
+include /blocks/content/content
+
+include /blocks/footer/footer
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Контакты';
+	- var pageDescription = 'Контакты'
+	- var pageKeywords = 'Контакты'
+
+block content
+	+header
+	+breadcrumbs
+	+main
+		+content
+		+sidebar
+	+footer
+

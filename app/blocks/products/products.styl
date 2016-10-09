@@ -1,0 +1,142 @@
+.products
+	position relative
+	&__product
+		margin-bottom 42px
+		font-family $raleway-bld
+		font-weight normal
+		line-height 30px
+		&:last-child
+			margin-bottom 18px
+	&__product-title
+		margin-bottom 12px
+		color #0078bf
+		font-size 24px
+	&__product-text
+		margin-bottom 15px
+		@extends .wysiwyg
+	&__product-w
+		position relative
+		min-height 280px
+		clearfix()
+	&__product-img
+		position absolute
+		top 0
+		left 0
+		width 311px
+		width ratio-percentage(311,880)
+		height auto
+		img
+			max-width 100%
+			height auto
+		+below(769px)
+			position static
+			width 100%
+	.rect-biggest,
+	.rect-med,
+	.rect-med_second,
+	.rect-small
+		position absolute
+
+	.rect-biggest
+		left -650px
+		bottom 192px
+	.rect-med
+		left -650px
+		bottom 620px
+	.rect-med_second
+		left auto
+		right -330px
+		bottom 230px
+	.rect-small
+		right -330px
+		bottom 442px
+
+.variants
+	float right
+	width 600px
+	width ratio-percentage(600,880)
+	+below(769px)
+		float none
+		width 100%
+	&__row
+		margin-bottom 10px
+		padding 3px 13px 3px 20px
+		width 600px
+		width 100%
+		min-height 40px
+		background-color #fff
+		border 1px solid #79b734
+		font-size 0
+		border-radius 0 10px 5px
+		cursor pointer
+		transition box-shadow .3s ease
+		&:hover
+			box-shadow 0 10px 15px rgba(0, 0, 0, 0.2)
+
+	&__col
+		display inline-block
+		vertical-align middle
+		+below(1216px)
+			margin-bottom 15px
+			width 100%
+		+below(769px)
+			width 100%
+
+	&__col_type
+		padding-right 20px
+		width 198px
+		+below(1216px)
+			width 50%
+		+below(769px)
+			width 100%
+	&__col_factory
+		padding-right 20px
+		width 220px
+		+below(1216px)
+			width 50%
+		+below(769px)
+			width 100%
+	&__col_info
+		padding-right 10px
+		width 122px
+		+below(1216px)
+			width 50%
+		+below(769px)
+			width 100%
+	&__col_download
+		width 24px
+		+below(1216px)
+			width 50%
+		+below(769px)
+			width 100%
+	&__col-title
+		margin-bottom 2px
+		color #737372
+		font-family $clearsans-reg
+		font-size 14px
+		font-weight 400
+		line-height 19px
+	&__col-value
+		color #262626
+		font-family $clearsans-med
+		font-size 16px
+		font-weight normal
+		line-height 22px
+	&__col-link
+		color #0078bf
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__col_download
+		position relative
+		.download
+			position absolute
+			top 0
+			right 0
+			left 0
+			bottom 0
+			margin auto
+		+below(1216px)
+			.download
+				position absolute
+				right auto

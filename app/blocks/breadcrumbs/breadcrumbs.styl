@@ -1,0 +1,37 @@
+.breadcrumbs
+	min-height 21px
+	background-color #0078bf
+	&__in
+		@extends .in
+	&__list
+		font-size 0
+		line-height 21px
+	&__item
+		position relative
+		display inline-block
+		vertical-align top
+		line-height 1
+		overflow hidden
+		+below(425px)
+			margin-bottom 3px
+		&:before
+			position absolute
+			top 0
+			left 0
+			content ""
+			sprite($breadcrumbs_left)
+	&__link
+		padding 0 10px 0 14px
+		font-family $clearsans-reg
+		font-size 14px
+		font-weight 400
+		line-height 21px
+		color #fff
+		text-transform uppercase
+		text-decoration none
+
+	&__item
+		&:last-child
+			.breadcrumbs__link
+				color #262626
+

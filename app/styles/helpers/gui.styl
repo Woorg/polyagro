@@ -39,6 +39,14 @@
 			background $button-second-bg-hover
 		&:active
 			background $button-second-bg-active
+
+.download
+	display inline-block
+	text-indent -9999px
+	sprite($download)
+	&:hover
+		sprite($download_hover)
+
 .title
 	color #0069b7
 	font-family $raleway-bld
@@ -61,18 +69,30 @@
 			font-size 31px
 		+below(406px)
 			font-size 19px
-	&_style-third
-		color #0078bf
-		font-family $raleway-bld
-		font-size 50px
-		font-weight normal
-		line-height 71px
-		line-height em(71,50)
-		text-transform uppercase
-		+below(1126px)
-			font-size 31px
-		+below(406px)
-			font-size 19px
+.title_style-third
+	color #0078bf
+	font-family $raleway-bld
+	font-size 50px
+	font-weight normal
+	line-height 71px
+	line-height em(71,50)
+	text-transform uppercase
+	+below(1126px)
+		font-size 31px
+	+below(406px)
+		font-size 19px
+.title_style-four
+	color #79b734
+	font-family $raleway-bld
+	font-size 50px
+	font-weight normal
+	line-height 61px
+	line-height em(61,50)
+	text-transform uppercase
+	+below(1126px)
+		font-size 31px
+	+below(406px)
+		font-size 19px
 
 .wysiwyg
 	p
@@ -89,4 +109,11 @@
 			font-size remify(14px)
 
 
-
+.rect-small
+	sprite($rect_small)
+.rect-med
+	sprite($rect_med)
+.rect-big
+	sprite($rect_big)
+.rect-biggest
+	sprite($rect_biggest)

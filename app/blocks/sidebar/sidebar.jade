@@ -1,0 +1,30 @@
+mixin sidebar()
+	+b.sidebar&attributes(attributes)
+		h3.sidebar__title Список продукции
+
+		ul.side-nav
+			li.side-nav__item
+				a.side-nav__link(href="#link") Азотные удобрения
+
+			li.side-nav__item
+				a.side-nav__link(href="#link") Комплексные удобрения
+			li.side-nav__item.side-nav__item_subnav
+				a.side-nav__link(href="#link") Фосфорные удобрения
+
+				ul.subnav
+					li.subnav__item
+						a.subnav__link(href="#sublink") Category Name 1
+					li.subnav__item
+						a.subnav__link(href="#sublink") Category Name 2
+					li.subnav__item
+						a.subnav__link(href="#sublink") Category Name 3
+					li.subnav__item
+						a.subnav__link(href="#sublink") Category Name 4
+					li.subnav__item
+						a.subnav__link(href="#sublink") Category Name 5
+			li.side-nav__item
+				a.side-nav__link(href="#link") Полимерные удобрения
+			li.side-nav__item
+				a.side-nav__link(href="#link") Красители
+			li.side-nav__item
+				a.side-nav__link(href="#link") Нефтепродукты

@@ -1,0 +1,99 @@
+.sidebar
+	margin-right 40px
+	margin-right ratio-percentage(40,1180)
+	width 260px
+	width ratio-percentage(260,1180)
+	float left
+	+below(601px)
+		float none
+		width 100%
+	&__title
+		margin-bottom 16px
+		color #737372
+		font-family $raleway-bld
+		font-size 24px
+		font-weight normal
+		line-height 30px
+
+.side-nav
+	font-family $raleway-bld
+	font-size 16px
+	font-weight normal
+	&__item
+		position relative
+		border-top 1px solid #ccc
+		padding 15px 19px 13px 0
+		&:first-child
+			border-top none
+		&:after
+			position absolute
+			top 50%
+			right 0
+			content ""
+			margin-top -4px
+			width 0
+			height 0
+			border-style solid
+			border-width 4px 0 4px 7px
+			border-color transparent transparent transparent #262626
+	&__link
+		color #262626
+		line-height 22px
+		text-decoration none
+		transition color .3s ease
+		&:hover,
+		&:active
+			color #79b734
+
+	&__item_subnav
+		&:hover
+			&:after
+				border-color transparent transparent transparent #79b734
+			.side-nav__link
+				color #79b734
+			.subnav
+				visibility visible
+				opacity 1
+				+below(601px)
+					display block
+.subnav
+	position absolute
+	top 0
+	right -240px
+	border 1px solid #79b734
+	padding 24px 30px
+	visibility hidden
+	opacity 0
+	width 230px
+	background-color #fff
+	box-shadow 0 10px 15px rgba(0, 0, 0, 0.2)
+	transition opacity .3s ease
+	+below(601px)
+		position static
+		right 0
+		width 100%
+		display none
+		// visibility visible
+		// opacity 1
+	&:after
+		position absolute
+		top 0
+		left -20px
+		content ""
+		width 20px
+		height 100%
+		background transparent
+	&__item
+		margin-bottom 10px
+	&__link
+		font-family $raleway-reg
+		font-size 16px
+		font-weight 400
+		line-height 22px
+		color #262626
+		text-decoration none
+		transition color .3s ease
+		&:hover
+			text-decoration underline
+			color #0078bf
+

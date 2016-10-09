@@ -1,0 +1,10 @@
+mixin breadcrumbs()
+	+b.breadcrumbs&attributes(attributes)
+		.breadcrumbs__in
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#link") Главная
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#link") Продукция
+				li.breadcrumbs__item
+					strong.breadcrumbs__link(href="#link") Азотные удобрения

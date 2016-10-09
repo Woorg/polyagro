@@ -1,0 +1,12 @@
+mixin subscribe()
+	+b.subscribe&attributes(attributes)
+		+e.title-w
+			+e.title Подписка на обновления
+		+e.w
+			+e.in
+				+e.text
+					+e('p') Для того чтобы регулярно получать новости о скидках и акциях, Вы пожете подписаться на наши обновления. Введите вам e-mail адрес в соседнее поле и нажмите на кнопку "Подписаться" и мы будем еженедельно отправлять оповещания.
+				+e.form
+					+b('form').subscribe-form(method='get')
+						+e('input').input(type='email' value='' placeholder='Ваш e-mail')
+						+e('button').submit(type='submit' value='Отправить')

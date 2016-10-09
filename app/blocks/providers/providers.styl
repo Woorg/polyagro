@@ -1,0 +1,110 @@
+.providers
+	display block
+	&__in
+		position relative
+		padding-top 30px
+		@extends .in
+		line-height 80px
+	&__title
+		margin-bottom 0px
+		@extends .title_style-second
+	&__text
+		margin-bottom 40px
+		padding-right 50px
+		@extends .wysiwyg
+	&__list
+		margin-right -25px
+		margin-right ratio-percentage(-25,1180)
+		font-size 0
+	&__item
+		margin-bottom 52px
+		padding-right 0px
+		width 400px
+		width ratio-percentage(390,1180)
+		display inline-block
+		vertical-align top
+		+below(768px)
+			width 50%
+		+below(600px)
+			width 100%
+	&__link
+		position relative
+		display block
+		text-decoration none
+	&__item-title
+		position absolute
+		top 95px
+		left 0
+		padding 10px 20px 10px 20px
+		display block
+		width 240px
+		height 80px
+		background-color #0078bf
+		color #fff
+		font-family $raleway-bld
+		font-size 24px
+		font-weight normal
+		line-height 30px
+		border-radius 0 20px 10px
+		box-shadow 13.9px 9.8px 24px rgba(0, 0, 0, 0.25)
+		transition background-color .3s ease
+	&__item-image
+		display block
+		height 300px
+		text-align right
+	&__item-text
+		padding-right 52px
+		display block
+		@extends .wysiwyg
+		+below(426px)
+			padding-right 0
+	&__link
+		&:hover
+			.providers__item-title
+				background-color #79b734
+		&:active
+			.providers__item-title
+				background-color #568224
+	&__button-w
+		text-align center
+		margin-top -22px
+		text-align center
+		overflow hidden
+	&__button
+		position relative
+		display inline-block
+		.button
+			// position relative
+			@extends .button_style-second
+		&:after,
+		&:before
+			position absolute
+			top 18px
+			content ""
+			width 910px
+			height 22px
+			z-index 0
+		&:after
+			right 226px
+			background url('../images/general/section-lines-left.png') 67px 0 no-repeat
+		&:before
+			left 230px
+			background url('../images/general/section-lines-right.png') -72px 0 no-repeat
+	&__rect-small,
+	&__rect-med,
+	&__rect-biggest
+		position absolute
+		content ""
+	&__rect-small
+		top -58px
+		right -320px
+		sprite($rect_small)
+	&__rect-med
+		top 132px
+		right -320px
+		sprite($rect_med)
+	&__rect-biggest
+		top 72px
+		left -340px
+		sprite($rect_biggest)
+

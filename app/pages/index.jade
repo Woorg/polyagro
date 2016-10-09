@@ -1,0 +1,25 @@
+include /blocks/header/header
+
+include /blocks/hero/hero
+include /blocks/providers/providers
+include /blocks/about/about
+include /blocks/subscribe/subscribe
+
+include /blocks/icon/icon
+include /blocks/footer/footer
+
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Главная';
+	- var pageDescription = 'Главная'
+	- var pageKeywords = 'Главная'
+
+block content
+	+header
+	+hero
+	+providers
+	+about
+	+subscribe
+	+footer

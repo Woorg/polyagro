@@ -1,0 +1,75 @@
+mixin footer()
+	+b('footer').footer&attributes(attributes)
+		+e.in
+			+e.rect-complete
+			+e.col._nav
+				+e('h3').col-title Навигация
+				+e.nav
+					+b.nav
+						+e('ul').list
+							+e('li').item
+								+e('a').link(href='#link') Главная
+							+e('li').item
+								+e('a').link(href='#link') Продукция
+							+e('li').item
+								+e('a').link(href='#link') Поставщикам
+							+e('li').item
+								+e('a').link(href='#link') Вакансии
+							+e('li').item
+								+e('a').link(href='#link') О компании
+							+e('li').item
+								+e('a').link(href='#link') Контакты
+			+e.col._products
+				+e('h3').col-title Продукция
+				+e.nav
+					+b.nav
+						+e('ul').list
+							+e('li').item
+								+e('a').link(href='#link') Азотные удобрения
+							+e('li').item
+								+e('a').link(href='#link') Комплексные удобрения
+							+e('li').item
+								+e('a').link(href='#link') Фосфорные удобрения
+
+			+e.col._find-us
+				+e('h3').col-title Найдите нас
+				+e.social
+					+b.social
+						+e('ul').list
+							+e('li').item
+								+e('a').link(href='#link')
+									+icon('fb-icon').icon._fb-icon
+									|Facebook
+							+e('li').item
+								+e('a').link(href='#link')
+									+icon('vk-icon').icon._vk-icon
+									|VKontakte
+							+e('li').item
+								+e('a').link(href='#link')
+									+icon('ok-icon').icon._ok-icon
+									|Odnoklassniki
+							+e('li').item
+								+e('a').link(href='#link')
+									+icon('yt-icon').icon._ytb-icon
+									|YouTube
+							+e('li').item
+								+e('a').link(href='#link')
+									+icon('tw-icon').icon._twit-icon
+									|Twitter
+
+			+e.col._contacts
+				+e('h3').col-title Контакты
+
+				+e.contacts
+					+b.contacts
+						+e.item._lead Руководство: <a href='tel:+84959999999'>+8 (495) 999 99 99</a>
+						+e.item._sales Отдел продаж:  <a href='tel:+84958888888'>+8 (495) 888 88 88</a>
+						+e.item._mail Почта: <a href='mailto:info@pasintez.ru'>info@pasintez.ru</a>
+
+						+e.item._address 109044 г. Москва, Россия ул. Динамовская, д.1А
+
+		+e.copyright
+			+b('small').copyright &copy; 1995 - 2016 ООО "ПолиАгроСинтез". Все права защищены.
+
+
+

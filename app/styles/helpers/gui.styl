@@ -1,0 +1,92 @@
+.in
+	margin auto
+	padding-left 10px
+	// padding-left ratio-percentage(10,1180)
+	padding-right 10px
+	// padding-right ratio-percentage(10,1180)
+	max-width 1200px
+
+.button
+	padding 16px 50px 14px
+	// padding 16px 50px 14px
+	display inline-block
+	vertical-align top
+	background $button-bg
+	color $button-text-color
+	font-family $clearsans-bld
+	font-size 12px
+	font-weight normal
+	line-height 20px
+	text-transform uppercase
+	text-decoration none
+	letter-spacing tracking(100)
+	transition background .3s ease
+	&:hover
+		background $button-bg-hover
+	&:active
+		background $button-bg-active
+	&_style-second
+		padding 16px 30px 14px
+		background $button-second-bg
+		&:hover
+			background $button-second-bg-hover
+		&:active
+			background $button-second-bg-active
+	&_style-third
+		padding 16px 40px 14px
+		background $button-second-bg
+		&:hover
+			background $button-second-bg-hover
+		&:active
+			background $button-second-bg-active
+.title
+	color #0069b7
+	font-family $raleway-bld
+	font-size 70px
+	font-weight normal
+	line-height 80px
+	line-height em(80,70)
+	text-transform uppercase
+	+below(1126px)
+		font-size 43px
+	&_style-second
+		color #79b734
+		font-family $raleway-bld
+		font-size 50px
+		font-weight normal
+		line-height 71px
+		line-height em(71,50)
+		text-transform uppercase
+		+below(1126px)
+			font-size 31px
+		+below(406px)
+			font-size 19px
+	&_style-third
+		color #0078bf
+		font-family $raleway-bld
+		font-size 50px
+		font-weight normal
+		line-height 71px
+		line-height em(71,50)
+		text-transform uppercase
+		+below(1126px)
+			font-size 31px
+		+below(406px)
+			font-size 19px
+
+.wysiwyg
+	p
+		color #262626
+		font-family $clearsans-med
+		font-size 16px
+		font-size remify(16px)
+
+		font-weight normal
+		line-height 30px
+		line-height em(30,16)
+		+below(1126px)
+			font-size 14px
+			font-size remify(14px)
+
+
+

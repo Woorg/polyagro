@@ -1,0 +1,151 @@
+.footer
+	display block
+	background #737372
+	color #FFF
+	font-family $clearsans-med
+	font-size 16px
+	font-weight normal
+	line-height 30px
+	&__in
+		position relative
+		padding-top 38px
+		padding-bottom 30px
+		@extends .in
+		clearfix()
+	&__rect-complete
+		position absolute
+		top 53px
+		right -320px
+		sprite($rect_complete)
+	&__col
+		float left
+		width 300px
+		width ratio-percentage(300,1180)
+		&_nav
+			width 300px
+			width ratio-percentage(300,1180)
+		+below(1092px)
+			width 50%
+			min-height 270px
+		+below(426px)
+			margin-bottom 30px
+			width 100%
+			min-height auto
+		// &_products
+
+		// &_find-us
+
+		&_contacts
+			width 280px
+			width ratio-percentage(280,1180)
+			+below(1092px)
+				width 50%
+			+below(426px)
+				width 100%
+	&__col-title
+		margin-bottom 13px
+		color #fff
+		font-family $raleway-bld
+		font-size 16px
+		font-weight normal
+		line-height 20px
+		text-transform uppercase
+	// &__nav
+
+	// &__social
+
+	// &__contacts
+
+	&__copyright
+		border-top 1px solid #969695
+		padding-top 24px
+		margin-right 40px
+		padding-bottom 33px
+		margin-left 40px
+		text-align center
+
+
+.nav
+	// &__list
+
+	&__item
+		margin-bottom 0
+	&__link
+		color #fff
+		font-family $clearsans-med
+		font-size 16px
+		font-weight normal
+		line-height 30px
+		text-decoration none
+		transition color .3s ease
+		&:hover
+			color #79b734
+			text-decoration underline
+		&:active
+			text-decoration underline
+			color #0e527a
+.social
+	// &__list
+	&__item
+		margin-bottom 0
+	&__link
+		color #FFF
+		text-decoration none
+		transition color .3s ease
+	&__icon
+		margin-right 10px
+		width 18px
+		display inline-block
+		vertical-align middle
+		fill #fff
+		&_fb-icon
+			// width 9px
+			height 16px
+		&_vk-icon
+			// width 16px
+			height 9px
+		&_ok-icon
+			// width 10px
+			height 16px
+		&_ytb-icon
+			// width 16px
+			height 11px
+		&_twit-icon
+			// width 16px
+			height 13px
+	&__link
+		&:hover
+			color #79b734
+			text-decoration underline
+			.social__icon
+				fill #79b734
+		&:active
+			text-decoration underline
+			color #0e527a
+			.social__icon
+				fill #0e527a
+.contacts
+	a
+		color #FFF
+		text-decoration none
+		transition color .3s ease
+		&:hover
+			color #79b734
+			text-decoration underline
+		&:active
+			text-decoration underline
+			color #0e527a
+	&__item
+
+		&_mail
+			margin-bottom 30px
+
+		&_address
+			padding-right 76px
+
+.copyright
+	color #fff
+	font-family $clearsans-med
+	font-size 16px
+	font-weight normal
+	line-height 1.42

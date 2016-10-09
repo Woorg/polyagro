@@ -1,0 +1,63 @@
+.about
+	display block
+	&__in
+		position relative
+		padding-top 36px
+		padding-bottom 30px
+		@extends .in
+		clearfix()
+	&__title
+		margin-bottom 2px
+		color #0078bf
+		font-family $raleway-bld
+		font-size 50px
+		font-weight normal
+		line-height 71px
+		line-height em(71,50)
+		text-transform uppercase
+		+below(1126px)
+			font-size 31px
+	&__image
+		float right
+		width 580px
+		width ratio-percentage(580,1180)
+		height 320px
+		height ratio-percentage(320,1180)
+		img
+			max-width 100%
+			height auto
+		+below(768px)
+			margin-bottom 30px
+			float none
+			width 100%
+			height auto
+	&__text
+		margin-right ratio-percentage(36,1180)
+		margin-bottom 30px
+		width 564px
+		width ratio-percentage(562,1180)
+		float left
+		@extends .wysiwyg
+		+below(768px)
+			float none
+			width 100%
+	&__button
+		// clear both
+		float left
+		.button
+			@extends .button_style-third
+		+below(1126px)
+			float none
+			clear both
+	&__rect-med,
+	&__rect-big
+		position absolute
+		content ""
+	&__rect-med
+		top 268px
+		right -340px
+		sprite($rect_med)
+	&__rect-big
+		top 60px
+		left -240px
+		sprite($rect_big)

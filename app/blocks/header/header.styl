@@ -1,0 +1,84 @@
+.header
+	position relative
+	display block
+	overflow hidden
+	&__in
+		padding-top 27px
+		padding-bottom 21px
+		@extends .in
+	&__logo
+		position absolute
+		top 27px
+		left 50%
+		transform translateX(-50%)
+		&:before,
+		&:after
+			position absolute
+			top 33px
+			content ""
+		&:before
+			right 140px
+			sprite($logo_lines_left)
+		&:after
+			left 140px
+			sprite($logo_lines_right)
+	&__nav
+		padding-top 90px
+		+below(1092px)
+			padding-top 120px
+
+.logo
+	display block
+	sprite($logo)
+	text-indent -9999px
+
+
+.main-nav
+	&__list
+		position relative
+		font-size 0
+		text-align justify
+		line-height 1
+		&:after
+			// position absolute
+			content ""
+			display inline-block
+			width 100%
+			height 0
+	&__item
+		// margin-right 40px
+		margin-right 23px
+		margin-right ratio-percentage(23,1180)
+		display inline-block
+		vertical-align top
+		line-height 1
+		&:nth-child(3n)
+			margin-right 422px
+			margin-right ratio-percentage(422,1180)
+			+below(1092px)
+				margin-right ratio-percentage(23,1180)
+			+below(768px)
+				margin-right 0
+				margin-bottom 10px
+		+below(768px)
+			width 33.3%
+			margin-right 0
+			margin-bottom 10px
+		+below(406px)
+			width 50%
+		&:last-child
+			margin-right 0
+	&__link
+		color $main-nav
+		font-family $raleway-bld
+		font-size 16px
+		font-weight normal
+		line-height 1.42
+		text-transform uppercase
+		text-decoration none
+		transition color .3s ease
+		&:hover
+			color $main-nav-hover
+		&:active
+			color $main-nav-active
+

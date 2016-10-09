@@ -1,0 +1,20 @@
+mixin header()
+	+b('header').header&attributes(attributes)
+		+e.in
+			+e.logo
+				+b('a').logo(href='/') Полиагросинтез
+			+e.nav
+				+b('nav').main-nav
+					+e('ul').list
+						+e('li').item
+							+e('a').link(href='#link') Главная
+						+e('li').item
+							+e('a').link(href='#link') продукция
+						+e('li').item
+							+e('a').link(href='#link') Поставщикам
+						+e('li').item
+							+e('a').link(href='#link') Вакансии
+						+e('li').item
+							+e('a').link(href='#link') О компании
+						+e('li').item
+							+e('a').link(href='#link') Контакты

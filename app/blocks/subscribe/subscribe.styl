@@ -1,0 +1,75 @@
+.subscribe
+	display block
+	&__title-w
+		padding-top 16px
+		@extends .in
+
+	&__w
+		padding-top 20px
+		padding-bottom 20px
+		background-color #0078bf
+	&__in
+		@extends .in
+		clearfix()
+	&__title
+		margin-bottom 12px
+		@extends .title_style-third
+	&__text
+		width 736px
+		width ratio-percentage(736,1180)
+		float left
+		@extends .wysiwyg
+		p
+			color #FFF
+			line-height 23px
+		+below(768px)
+			margin-bottom 20px
+			float none
+			width 100%
+	&__form
+		float right
+		width ratio-percentage(380,1180)
+		+below(768px)
+			float none
+			width 100%
+
+.subscribe-form
+	position relative
+	width 380px
+	width 100%
+	height 70px
+	&__input
+		border 1px solid #e1e1e1
+		padding 25px 100px 24px 20px
+		width 380px
+		width 100%
+		height 70px
+		background-color #fff
+		font-family $clearsans-med
+		font-size 16px
+		font-weight normal
+		line-height 20px
+		placeholder()
+			color #ccc
+	&__submit
+		position absolute
+		top 10px
+		right 10px
+		width 50px
+		height 50px
+		border none
+		background-color #79b734
+		text-indent -9999px
+		transition background-color .3s ease
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			margin-left -10px
+			margin-top -10px
+			content ""
+			sprite($send_icon)
+		&:hover
+			background-color #0078bf
+		&:active
+			background-color #0e527a

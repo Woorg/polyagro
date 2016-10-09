@@ -1,0 +1,68 @@
+mixin providers()
+	+b.providers&attributes(attributes)
+		+e.in
+			+e('h2').title Наши поставщики
+
+			+e.text
+				+e('p') Наша фирма производит самые лучшие, качественные минеральные удобрения, на территории СНГ. Мы активно развиваемся с своей деятельности с 1998 года. С тех пор, наш штат увеличился в десятки раз, в соответствии со спросом. Ниже представляем наш каталог товаров.
+
+			+e('ul').list
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Азотные удобрения
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-1.png' alt='product 1')
+						+e('div').item-text
+							+e('p') Неорганические и органические азот содержащие вещества, которые вносят в почву для повышения урожайности...
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Комплексные удобрения
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-2.png' alt='product 2')
+						+e('div').item-text
+							+e('p') Комплексные удобрения содержат несколько элементов в составе одного соединения или в виде механической смеси специально...
+
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Фосфорные удобрения
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-3.png' alt='product 3')
+						+e('div').item-text
+							+e('p') Фосфоритная мука представляет собой тонкодисперсный порошок серого или бурого цвета, не растворимый в воде...
+
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Полимерная продукция
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-4.png' alt='product 4')
+						+e('div').item-text
+							+e('p') Высокий уровень прочности, высокая эластичность и изоляционные свойства полимерной продукции позволяют...
+
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Красители
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-5.png' alt='product 5')
+						+e('div').item-text
+							+e('p') Смеси углеводородов, а также индивидуальные химические соединения, получаемые из нефти и нефтяных газов...
+
+				+e('li').item
+					+e('a').link(href='#link')
+						+e('div').item-title Нефтепродукты
+						+e('div').item-image
+							+e('img')(src='assets/images/content/product-img-6.png' alt='product 6')
+						+e('div').item-text
+							+e('p') Смеси углеводородов, а также индивидуальные химические соединения, получаемые из нефти и нефтяных газов...
+
+			+e.rect-small
+			+e.rect-med
+			+e.rect-biggest
+
+		+e.button-w
+			+e.button
+				+b('a').button._style-second(href='#button') Заказать продукцию
+
+
+
+
+

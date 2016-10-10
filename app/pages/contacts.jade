@@ -24,7 +24,7 @@ block content
 				li.breadcrumbs__item
 					strong.breadcrumbs__link(href="#link") Контакты
 	+main
-		+content-wide
+		+content-wide._flow-out
 			h1.content__title Контакты
 
 			.content__w
@@ -108,7 +108,7 @@ block content
 	+map
 
 	+footer
-	+scripts(['https://maps.googleapis.com/maps/api/js?key=AIzaSyCWvsMQjEMAx7tT2jnMykNF7_gAUpS3-g4&signed_in=true','app.min.js'])
+	+scripts(['https://maps.googleapis.com/maps/api/js?key=AIzaSyCWvsMQjEMAx7tT2jnMykNF7_gAUpS3-g4','app.min.js'])
 
 	script.
 		function mapInit() {

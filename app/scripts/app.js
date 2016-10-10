@@ -26,11 +26,49 @@ $(() => {
 
 	});
 
+	var carousel = $('.carousel__list');
 
-	$('.popup-trigger').magnificPopup({
-		type: 'inline'
+	carousel.owlCarousel({
+		margin: 20,
+		autoWidth: false,
+		items: 4,
+		loop: true,
+		center: false,
+		nav: false,
+		stagePadding: 0,
+		dots: true,
+		responsive: {
+			320: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			1000:{
+				items: 4
+			}
+		}
+
 	});
 
+
+	$('.popup-trigger').magnificPopup({
+		type: 'inline',
+		closeBtnInside: true
+	});
+
+	$('.popup__close').on( "click", function() {
+		$.magnificPopup.close();
+	});
+
+	// gallery
+
+	$('.carousel__link').magnificPopup({
+		type: 'image',
+		gallery: {
+			enabled: true
+		}
+	});
 
 	// $(".input__field").each(function() {
 	// 	if ($(this).val() != "") {

@@ -1,0 +1,55 @@
+include /blocks/icon/icon
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/content-wide/content-wide
+include /blocks/gallery/gallery
+include /blocks/player/player
+include /blocks/popup/popup
+
+
+
+include /blocks/footer/footer
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'О компании';
+	- var pageDescription = 'О компании'
+	- var pageKeywords = 'О компании'
+
+block content
+	+header
+	+breadcrumbs
+		.breadcrumbs__in
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#link") Главная
+				li.breadcrumbs__item
+					strong.breadcrumbs__link(href="#link") О компании
+	+main
+		+content-wide
+			h1.content__title О компании
+
+			.content__text
+				img.float-right(src='assets/images/content/about-img.jpg' alt='image')
+				p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+
+
+				p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+			+gallery
+			+player
+
+
+
+	+b.order-button
+		+e.button-w
+			+e.button
+				+b('a').button._style-second.popup-trigger(href='#popup') Заказать продукцию
+
+	+footer
+	+popup.mfp-hide#popup
+
+

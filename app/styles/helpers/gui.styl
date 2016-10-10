@@ -47,6 +47,35 @@
 		&:active
 			background $button-second-bg-active
 
+
+.order-button
+	margin-bottom 50px
+	&__button-w
+		text-align center
+		margin-top -22px
+		text-align center
+		overflow hidden
+	&__button
+		position relative
+		display inline-block
+		.button
+			// position relative
+			@extends .button_style-second
+		&:after,
+		&:before
+			position absolute
+			top 18px
+			content ""
+			width 910px
+			height 22px
+			z-index 0
+		&:after
+			right 226px
+			background url('../images/general/section-lines-left.png') 67px 0 no-repeat
+		&:before
+			left 230px
+			background url('../images/general/section-lines-right.png') -72px 0 no-repeat
+
 .download
 	display inline-block
 	text-indent -9999px
@@ -108,6 +137,33 @@
 		font-size 16px
 		font-size remify(16px)
 
+		font-weight normal
+		line-height 30px
+		line-height em(30,16)
+		+below(1126px)
+			font-size 14px
+			font-size remify(14px)
+	img
+		max-width 100%
+		height auto
+		display block
+
+	.float-right
+		margin-left 22px
+		margin-bottom 22px
+		float right
+	.float-left
+		margin-right 22px
+		margin-bottom 22px
+		float left
+
+.wysiwyg-scnd
+	p
+		margin-bottom 20px
+		color #262626
+		font-family $clearsans-med
+		font-size 16px
+		font-size remify(16px)
 		font-weight normal
 		line-height 30px
 		line-height em(30,16)

@@ -1,8 +1,10 @@
 .content
 	&.content_wide
-		margin-bottom -170px
-		width 100%
 		float none
+		width 100%
+	&.content_flow-out
+		margin-bottom -170px
+		float left
 		+below(900px)
 			margin-bottom 0
 	&__title
@@ -12,7 +14,7 @@
 		z-index 1
 		clearfix()
 .feedback
-	padding 57px 60px 44px
+	padding 50px 60px 44px
 	float left
 	width 780px
 	width ratio-percentage(780,1180)
@@ -116,7 +118,7 @@
 		bottom 50px
 		left 56px
 		right 56px
-		+below(1044px)
+		+below(1142px)
 			position static
 			left auto
 			right auto

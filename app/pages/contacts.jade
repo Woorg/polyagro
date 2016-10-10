@@ -2,8 +2,8 @@ include /blocks/icon/icon
 include /blocks/header/header
 include /blocks/breadcrumbs/breadcrumbs
 include /blocks/main/main
-include /blocks/sidebar/sidebar
-include /blocks/content/content
+include /blocks/content-wide/content-wide
+include /blocks/map/map
 
 include /blocks/footer/footer
 
@@ -17,8 +17,136 @@ block head
 block content
 	+header
 	+breadcrumbs
+		.breadcrumbs__in
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#link") Главная
+				li.breadcrumbs__item
+					strong.breadcrumbs__link(href="#link") Контакты
 	+main
-		+content
-		+sidebar
+		+content-wide
+			h1.content__title Контакты
+
+			.content__w
+				.feedback
+					h2.feedback__title
+						.feedback__title-icon
+							+icon('send')
+						| Напишите нам
+					form.feedback__form(method="post" action="")
+						.feedback__row
+							.feedback__input
+								+b.input
+									+e('input').field(type='text' value='' id='input-1' name='name')
+									+e.valid
+									+e.error
+									+e.label(for='input-1') Ваше имя<span>*</span>
+							.feedback__input
+								+b.input
+									+e('input').field(type='text' value='' id='input-2' name='phone')
+									+e.valid
+									+e.error
+									+e.label(for='input-2') Телефон
+						.feedback__row
+							.feedback__input.feedback__input_wide
+								+b.input
+									+e('input').field(type='text' value='' id='input-3' name='email')
+									+e.valid
+									+e.error
+									+e.label(for='input-3') E-mail<span>*</span>
+						.feedback__row
+							.feedback__input.feedback__input_wide
+								+b.input._note
+									+e('textarea').field._text(value='' id='input-4' name='note')
+									+e.valid
+									+e.error
+									+e.label._text(for='input-4') Сообщение<span>*</span>
+						.feedback__button
+							+b('input').button._style-four(type='submit' value='отправить')
+				.contacts-side
+					h2.contacts-side__title
+						.contacts-side__title-icon
+							+icon('phone')
+						| Контакты
+					.contacts-side__contacts
+						+b.contacts
+							+e.item._lead Руководство: <a href='tel:+84959999999'>+8 (495) 999 99 99</a>
+							+e.item._sales Отдел продаж:  <a href='tel:+84958888888'>+8 (495) 888 88 88</a>
+							+e.item._mail Почта: <a href='mailto:info@pasintez.ru'>info@pasintez.ru</a>
+
+							+e.item._address 109044 г. Москва, Россия ул. Динамовская, д.1А
+
+					.contacts-side__social
+						.social.social_big
+							.social__title Мы в социальных сетях:
+							ul.social__list
+								li.social__item
+									a.social__link(href="#link")
+										.social__icon.social__icon_fb-icon
+											+icon('fb-icon')
+										| Facebook
+								li.social__item
+									a.social__link(href="#link")
+										.social__icon.social__icon_vk-icon
+											+icon('vk-icon')
+										| VKontakte
+								li.social__item
+									a.social__link(href="#link")
+										.social__icon.social__icon_ok-icon
+											+icon('ok-icon')
+										| Odnoklassniki
+								li.social__item
+									a.social__link(href="#link")
+										.social__icon.social__icon_ytb-icon
+											+icon('yt-icon')
+										| YouTube
+								li.social__item
+									a.social__link(href="#link")
+										.social__icon.social__icon_twit-icon
+											+icon('tw-icon')
+										| Twitter
+	+map
+
 	+footer
+	+scripts(['https://maps.googleapis.com/maps/api/js?key=AIzaSyCWvsMQjEMAx7tT2jnMykNF7_gAUpS3-g4&signed_in=true','app.min.js'])
+
+	script.
+		function mapInit() {
+
+		  var styleArray = [
+			{
+			  featureType: 'all',
+			  stylers: [
+				{ saturation: -100 }
+			  ]
+			}
+		  ];
+
+		  var mapOptions = {
+			zoom: 17,
+			center: new google.maps.LatLng(55.732307, 37.663773),
+			styles: styleArray,
+			scrollwheel: false
+		  };
+
+
+		  var map = new google.maps.Map(document.getElementById('map'),
+			mapOptions);
+
+		  var image = 'assets/images/general/marker.png';
+		  var marker = new google.maps.Marker({
+		  	position: {lat: 55.732307, lng: 37.663773},
+		  	map: map,
+		  	icon: image
+		  });
+
+		  google.maps.event.addDomListener(window, 'resize', function() {
+			var center = map.getCenter();
+			google.maps.event.trigger(map, 'resize');
+			map.setCenter(center);
+		  });
+
+		}
+
+		google.maps.event.addDomListener(window, 'load', mapInit);
 

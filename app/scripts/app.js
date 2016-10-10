@@ -71,7 +71,10 @@ $(() => {
 
 	// validation
 
-	var popupForm = $('#popup-form');
+	var popupForm = $('#popup-form'),
+		feedbackForm = $('.feedback__form');
+
+
 
 	popupForm.validate({
 		rules: {
@@ -112,5 +115,35 @@ $(() => {
 		}
 	});
 
+	feedbackForm.validate({
+		rules: {
+			name: {
+				required: true
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			note: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: ''
+			},
+			email: {
+				required: '',
+				email: ''
+			},
+			note: {
+				required: ''
+			}
+		}
+	});
+
 
 });
+
+
+

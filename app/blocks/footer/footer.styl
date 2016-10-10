@@ -84,46 +84,7 @@
 		&:active
 			text-decoration underline
 			color #0e527a
-.social
-	// &__list
-	&__item
-		margin-bottom 0
-	&__link
-		color #FFF
-		text-decoration none
-		transition color .3s ease
-	&__icon
-		margin-right 10px
-		width 18px
-		display inline-block
-		vertical-align middle
-		fill #fff
-		&_fb-icon
-			// width 9px
-			height 16px
-		&_vk-icon
-			// width 16px
-			height 9px
-		&_ok-icon
-			// width 10px
-			height 16px
-		&_ytb-icon
-			// width 16px
-			height 11px
-		&_twit-icon
-			// width 16px
-			height 13px
-	&__link
-		&:hover
-			color #79b734
-			text-decoration underline
-			.social__icon
-				fill #79b734
-		&:active
-			text-decoration underline
-			color #0e527a
-			.social__icon
-				fill #0e527a
+
 .contacts
 	a
 		color #FFF
@@ -136,13 +97,14 @@
 			text-decoration underline
 			color #0e527a
 	&__item
-
+		// white-space nowrap
 		&_mail
 			margin-bottom 30px
 
 		&_address
-			padding-right 76px
-
+			padding-right 70px
+			+below(1216px)
+				padding-right 0
 .copyright
 	color #fff
 	font-family $clearsans-med

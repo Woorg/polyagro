@@ -1,0 +1,125 @@
+.content
+	&.content_wide
+		margin-bottom -170px
+		width 100%
+		float none
+		+below(900px)
+			margin-bottom 0
+	&__title
+		margin-bottom 23px
+	&__w
+		position relative
+		z-index 1
+		clearfix()
+.feedback
+	padding 57px 60px 44px
+	float left
+	width 780px
+	width ratio-percentage(780,1180)
+	min-height 500px
+	background-color #fff
+	box-shadow 0 10px 50px rgba(0, 0, 0, 0.25)
+	+below(900px)
+		margin-bottom 20px
+		float none
+		width 100%
+		padding-left ratio-percentage(60,1180)
+		padding-right ratio-percentage(60,1180)
+	&__title
+		margin-bottom 15px
+		color #0078bf
+		font-family $raleway-bld
+		font-size 24px
+		font-weight normal
+		line-height 30px
+		+below(900px)
+			margin-bottom 20px
+	&__title-icon
+		margin-right 13px
+		margin-left -5px
+		display inline-block
+		vertical-align top
+		svg
+			width 30px
+			height 30px
+			fill #0078bf
+	// &__form
+
+	&__row
+		margin-bottom 40px
+		clearfix()
+		+below(600px)
+			margin-bottom 20px
+	&__input
+		margin-left 20px
+		margin-left ratio-percentage(20,660)
+		float left
+		width 320px
+		width ratio-percentage(320,660)
+		+below(600px)
+			margin-left 0
+			margin-bottom 20px
+			width 100%
+			float none
+		input
+			width 100%
+		&:first-child
+			margin-left 0
+	&__input_wide
+		width 100%
+		.input
+			width 660px
+			width 100%
+		.input__field
+			width 100%
+	&__button
+		text-align right
+		.button
+			border none
+
+
+.contacts-side
+	position relative
+	padding 56px 56px
+	float right
+	width 380px
+	width ratio-percentage(380,1180)
+	min-height 500px
+	background-color #0078bf
+	color #FFF
+	box-shadow 0 10px 50px rgba(14, 82, 122, 0.5)
+	+below(900px)
+		float none
+		width 100%
+		min-height 200px
+		padding-left ratio-percentage(56,1180)
+		padding-right ratio-percentage(56,1180)
+	&__title
+		margin-bottom 16px
+		color #fff
+		font-family $raleway-bld
+		font-size 24px
+		font-weight normal
+		line-height 30px
+	&__title-icon
+		margin-right 14px
+		display inline-block
+		vertical-align top
+		svg
+			width 30px
+			height 30px
+			fill #fff
+	&__contacts
+		margin-bottom 20px
+	&__social
+		position absolute
+		bottom 50px
+		left 56px
+		right 56px
+		+below(1044px)
+			position static
+			left auto
+			right auto
+
+
+
